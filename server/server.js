@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.use(require('./routes/usuario'))
-
+//Configuracion de rutas generales de la aplicacion
+app.use(require('./routes/index'));
 
 /*Mongoose connection*/
 mongoose.connect(process.env.URLDB, (err, resp) => {
@@ -23,7 +23,7 @@ mongoose.connect(process.env.URLDB, (err, resp) => {
     console.log('Base de datos conectada');
 });
 
-
+/***** Host web aplicacion****** */
 app.listen(process.env.PORT, () => {
     console.log(`Escuchando puerto: 3000`);
 })
