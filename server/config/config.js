@@ -23,3 +23,6 @@ else
     urlDB = process.env.MONGO_DB_URL;
 
 process.env.URLDB = urlDB;
+
+/****Google Client id**** */
+process.env.CLIENT_ID = process.env.CLIENT_ID || '771097061596-vljb52dek0q0cv51gvgok2mb3f12aman.apps.googleusercontent.com'
