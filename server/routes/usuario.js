@@ -77,6 +77,7 @@ app.post('/usuario', [verificaToken, verificaAdminRole], (req, res) => {
 app.put('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
     let id = req.params.id;
 
+    //uso underscore para recuperar propiedades especificadas del modelo -> _
     let body = _.pick(req.body, ['nombre', 'email', 'img', 'role', 'estado']);
 
 

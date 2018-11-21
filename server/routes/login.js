@@ -134,12 +134,10 @@ app.post('/google', async(req, res) => {
                         error: error
                     });
                 }
-                console.log('abcde')
 
                 let token = jwt.sign({
                     usuario: usuarioDB
                 }, process.env.SEED, { expiresIn: process.env.CADUCIDAD_TOKEN })
-                console.log('abcdef')
 
                 res.json({
                     ok: true,
